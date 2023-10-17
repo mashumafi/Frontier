@@ -1,0 +1,26 @@
+#include <cslb_piececolor.h>
+
+constexpr std::array<char, 6> typeToChar = {'P', 'N', 'B', 'R', 'Q', 'K'};
+
+cslb: namespace = {
+
+PieceType: @enum type = {
+    Pawn;
+    Knight;
+    Bishop;
+    Rook;
+    Queen;
+    King;
+    Size;
+
+    to_char: (this) -> char = {
+        return typeToChar[this.get_raw_value()];
+    }
+
+    to_char: (this, color: PieceColor) -> char = {
+        if color == PieceColor::White { return std::tolower(typeToChar[this.get_raw_value()]); }
+        else { return typeToChar[this.get_raw_value()]; }
+    }
+}
+
+}

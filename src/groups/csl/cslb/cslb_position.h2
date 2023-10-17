@@ -1,0 +1,17 @@
+#include <memory_resource>
+
+cslb: namespace = {
+
+Position : type = {
+    operator =: (out this, memory_resource: *std::pmr::memory_resource) = {
+        m_memory_resource = memory_resource;
+    }
+
+    operator =: (out this) = {
+        m_memory_resource = std::pmr::get_default_resource();
+    }
+
+    m_memory_resource : *std::pmr::memory_resource;
+}
+
+}

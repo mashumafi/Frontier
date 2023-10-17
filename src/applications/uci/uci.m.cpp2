@@ -1,0 +1,8 @@
+#include <cslb_square.h>
+#include <cslt_zobristhash.h>
+#include <cslb_position.h>
+
+main: (args) -> int = {
+    sq := cslb::Square::A1;
+    std::cout << "TEST" << std::endl;
+}

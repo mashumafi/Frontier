@@ -1,0 +1,11 @@
+cslb: namespace = {
+
+bitboard: type = {
+    this: std::bitset<64> = ();
+
+    pop: () = {
+
+    }
+}
+
+}

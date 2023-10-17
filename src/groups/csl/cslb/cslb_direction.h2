@@ -1,0 +1,14 @@
+cslb: namespace = {
+    
+Direction: @enum<u8> type = {
+    East := 1;
+    North := 8;
+    West := -East;
+    South := -North;
+    NorthEast := North + East;
+    SouthEast := South + East;
+    NorthWest := North + West;
+    NorthWest := South + West;
+}
+
+}

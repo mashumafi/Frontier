@@ -1,0 +1,15 @@
+cslb: namespace = {
+
+Castling: @flag_enum<i8> type = {
+    WhiteShort;
+    WhiteLong;
+    BlackShort;
+    BlackLong;
+    Size;
+
+    WhiteCastling := WhiteShort | WhiteLong;
+    BlackCastling := BlackShort | BlackLong;
+    Everything := WhiteShort | WhiteLong | BlackShort | BlackLong;
+}
+
+}

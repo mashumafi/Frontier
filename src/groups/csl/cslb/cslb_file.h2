@@ -1,0 +1,15 @@
+cslb: namespace = {
+
+File : @enum type = {
+    FileA;
+    FileB;
+    FileC;
+    FileD;
+    FileE;
+    FileF;
+    FileG;
+    FileH;
+    Size;
+}
+
+}

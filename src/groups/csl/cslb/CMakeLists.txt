@@ -1,0 +1,14 @@
+ADD_LIBRARY2(cslb
+    FILES
+        cslb_bitboard.h2
+        cslb_castling.h2
+        cslb_direction.h2
+        cslb_file.h2
+        cslb_move.h2
+        cslb_piececolor.h2
+        cslb_piecetype.h2
+        cslb_position.h2
+        cslb_rank.h2
+        cslb_square.h2
+    EXTRA_ARGS
+)

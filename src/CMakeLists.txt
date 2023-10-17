@@ -1,0 +1,5 @@
+add_subdirectory(thirdparty)
+add_subdirectory(adapters)
+add_subdirectory(groups)
+add_subdirectory(standalones)
+add_subdirectory(applications)

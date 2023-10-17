@@ -1,0 +1,16 @@
+cslb: namespace = {
+
+PieceColor : @enum type = {
+    White;
+    Black;
+
+    invert: (inout this) == {
+        if this == White {
+            this = Black;
+        } else {
+            this = White;
+        }
+    }
+}
+
+}

@@ -1,0 +1,43 @@
+#include <cslb_piecetype.h>
+#include <cslb_square.h>
+#include <cslb_file.h>
+#include <cslb_castling.h>
+
+cslt: namespace = {
+
+Random64 : type = {
+
+    operator =: (out this, seed: uint64_t) = {
+        gen = std::mt19937_64(seed);
+        distrib = std::uniform_int_distribution<uint64_t>(0);
+    }
+
+    next : (inout this) -> uint64_t = {
+        return distrib(gen);
+    }
+
+    gen: std::mt19937_64;
+    distrib: std::uniform_int_distribution<uint64_t>;
+}
+
+ZobristKeys : type = {
+    operator =: (out this) = {
+        rand : Random64 = (1122334455);
+    }
+
+    //psq: std::array<std:array<uint64_t, Square::Size>, PieceType::Size>;
+    //enpassant: std::array<uint64_t, File.Size>;
+    //castling: std::array<uint64_t, Castling::Size>;
+    //side: uint64_t;
+}
+
+zobrist_keys: const ZobristKeys = ();
+
+ZobristHash : type = {
+
+    operator =: (out this) = {
+    }
+
+}
+
+}
