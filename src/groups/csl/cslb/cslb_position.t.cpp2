@@ -1,0 +1,11 @@
+#include <doctest/doctest.h>
+
+TEST_CASE("basic")
+{
+    CHECK(5 == 5);
+}
+
+TEST_CASE("advanced")
+{
+    CHECK(5 == 5);
+}

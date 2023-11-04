@@ -9,6 +9,17 @@ ADD_LIBRARY2(cslb
         cslb_piecetype.h2
         cslb_position.h2
         cslb_rank.h2
+        cslb_session.h2
         cslb_square.h2
+        cslb_zobristhash.h2
     EXTRA_ARGS
 )
+
+ADD_EXECUTABLE2(cslb_test
+    FILES
+        cslb_position.t.cpp2
+)
+TARGET_LINK_LIBRARIES(cslb_test PRIVATE doctest cslb)
+TARGET_COMPILE_DEFINITIONS(cslb_test PRIVATE DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN)
+INCLUDE(doctest)
+DOCTEST_DISCOVER_TESTS(cslb_test)

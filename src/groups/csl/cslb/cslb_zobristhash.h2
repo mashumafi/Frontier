@@ -1,0 +1,57 @@
+#include <cslb_castling.h>
+#include <cslb_file.h>
+#include <cslb_piecetype.h>
+#include <cslb_position.h>
+#include <cslb_square.h>
+
+constexpr size_t CastlingSize = cslb::Castling::Size.get_raw_value();
+
+cslb: namespace = {
+
+Random64 : type = {
+
+    operator =: (out this, seed: uint64_t) = {
+        gen = std::mt19937_64(seed);
+        distrib = std::uniform_int_distribution<uint64_t>(0);
+    }
+
+    next : (inout this) -> uint64_t = {
+        return distrib(gen);
+    }
+
+    gen: std::mt19937_64;
+    distrib: std::uniform_int_distribution<uint64_t>;
+}
+
+make_castling_keys: (inout rand: Random64) -> std::array<uint64_t, CastlingSize> = {
+    keys : std::array<uint64_t, CastlingSize> = ();
+    for std::ranges::iota_view(0, cslb::Castling::Size.get_raw_value()) do (i)
+    {
+        keys[i] = rand.next();
+    }
+    return keys;
+}
+
+ZobristKeys : type = {
+    operator =: (out this, inout rand: Random64) = {
+        castling = make_castling_keys(rand);
+        side = rand.next();
+    }
+
+    //psq: std::array<std:array<uint64_t, Square::Size>, PieceType::Size>;
+    //enpassant: std::array<uint64_t, File.Size>;
+    castling: std::array<uint64_t, CastlingSize>;
+    side: uint64_t;
+}
+
+random : Random64 = (11223344);
+zobrist_keys: const ZobristKeys = (random);
+
+ZobristHash : type = {
+
+    operator =: (out this, position: cslb::Position) = {
+    }
+
+}
+
+}

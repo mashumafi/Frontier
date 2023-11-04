@@ -11,7 +11,10 @@ Position : type = {
         m_memory_resource = std::pmr::get_default_resource();
     }
 
-    m_memory_resource : *std::pmr::memory_resource;
+    operator =: (out this, move that) = {
+    }
+
+    m_memory_resource : * std::pmr::memory_resource;
 }
 
 }

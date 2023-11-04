@@ -1,8 +1,10 @@
-#include <cslb_square.h>
-#include <cslt_zobristhash.h>
 #include <cslb_position.h>
+#include <cslb_session.h>
+
+#include <memory_resource>
 
 main: (args) -> int = {
-    sq := cslb::Square::A1;
-    std::cout << "TEST" << std::endl;
+    memory_resource : *std::pmr::memory_resource = std::pmr::new_delete_resource();
+    position : cslb::Position = (memory_resource);
+    session : cslb::Session = (move position, memory_resource);
 }
