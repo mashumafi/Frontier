@@ -1,11 +1,12 @@
-#include <cslb_piecetype.h>
-#include <cslb_square.h>
-#include <cslb_file.h>
 #include <cslb_castling.h>
+#include <cslb_file.h>
+#include <cslb_piecetype.h>
+#include <cslb_position.h>
+#include <cslb_square.h>
 
 constexpr size_t CastlingSize = cslb::Castling::Size.get_raw_value();
 
-cslt: namespace = {
+cslb: namespace = {
 
 Random64 : type = {
 
@@ -48,7 +49,7 @@ zobrist_keys: const ZobristKeys = (random);
 
 ZobristHash : type = {
 
-    operator =: (out this) = {
+    operator =: (out this, position: cslb::Position) = {
     }
 
 }

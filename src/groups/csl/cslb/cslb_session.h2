@@ -1,0 +1,26 @@
+#include <cslb_position.h>
+#include <cslb_zobristhash.h>
+
+#include <memory_resource>
+
+cslb: namespace = {
+
+Session : type = {
+    operator =: (out this, move position: cslb::Position, memory_resource: *std::pmr::memory_resource) = {
+        m_hash = (position);
+        m_position = position;
+        m_memory_resource = memory_resource;
+    }
+
+    operator =: (out this, move position: cslb::Position) = {
+        m_hash = (position);
+        m_position = position;
+        m_memory_resource = std::pmr::get_default_resource();
+    }
+
+    m_hash: cslb::ZobristHash;
+    m_position: cslb::Position;
+    m_memory_resource : * std::pmr::memory_resource;
+}
+
+}

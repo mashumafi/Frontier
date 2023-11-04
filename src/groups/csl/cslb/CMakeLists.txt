@@ -9,7 +9,9 @@ ADD_LIBRARY2(cslb
         cslb_piecetype.h2
         cslb_position.h2
         cslb_rank.h2
+        cslb_session.h2
         cslb_square.h2
+        cslb_zobristhash.h2
     EXTRA_ARGS
 )
 
