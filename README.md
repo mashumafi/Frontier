@@ -2,6 +2,8 @@
 
 A chess engine written in the experimental [cppfront](https://github.com/hsutter/cppfront).
 
+[![CMake on multiple platforms](https://github.com/mashumafi/Frontier/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/mashumafi/Frontier/actions/workflows/cmake-multi-platform.yml)
+
 ## About
 
 ### CMake

@@ -7,6 +7,3 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(doctest)
-
-#SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH};${doctest_SOURCE_DIR}/scripts/cmake)
-#INCLUDE(doctest)
