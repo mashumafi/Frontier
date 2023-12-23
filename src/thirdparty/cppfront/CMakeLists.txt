@@ -3,7 +3,7 @@ INCLUDE(FetchContent)
 FetchContent_Declare(
     cppfront
     GIT_REPOSITORY https://github.com/hsutter/cppfront
-    GIT_TAG        main
+    GIT_TAG        b81c80f51e316a80a832e49668d6cbd58627a5f4
 )
 
 FetchContent_MakeAvailable(cppfront)

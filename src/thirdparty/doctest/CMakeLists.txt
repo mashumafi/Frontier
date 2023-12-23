@@ -7,3 +7,6 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(doctest)
+
+add_library(doctest_main doctest.m.cpp)
+target_link_libraries(doctest_main PUBLIC doctest)

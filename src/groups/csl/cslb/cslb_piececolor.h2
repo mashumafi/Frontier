@@ -1,6 +1,6 @@
 cslb: namespace = {
 
-PieceColor : @enum type = {
+PieceColor: @enum type = {
     White;
     Black;
 

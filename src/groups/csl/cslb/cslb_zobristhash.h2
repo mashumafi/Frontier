@@ -8,7 +8,7 @@ constexpr size_t CastlingSize = cslb::Castling::Size.get_raw_value();
 
 cslb: namespace = {
 
-Random64 : type = {
+Random64: type = {
 
     operator =: (out this, seed: uint64_t) = {
         gen = std::mt19937_64(seed);
@@ -32,7 +32,7 @@ make_castling_keys: (inout rand: Random64) -> std::array<uint64_t, CastlingSize>
     return keys;
 }
 
-ZobristKeys : type = {
+ZobristKeys: type = {
     operator =: (out this, inout rand: Random64) = {
         castling = make_castling_keys(rand);
         side = rand.next();
@@ -44,10 +44,10 @@ ZobristKeys : type = {
     side: uint64_t;
 }
 
-random : Random64 = (11223344);
+random: Random64 = (11223344);
 zobrist_keys: const ZobristKeys = (random);
 
-ZobristHash : type = {
+ZobristHash: type = {
 
     operator =: (out this, position: cslb::Position) = {
     }

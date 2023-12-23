@@ -5,7 +5,7 @@
 
 cslb: namespace = {
 
-Session : type = {
+Session: type = {
     operator =: (out this, move position: cslb::Position, memory_resource: *std::pmr::memory_resource) = {
         m_hash = (position);
         m_position = position;

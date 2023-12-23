@@ -1,6 +1,8 @@
 {
     "cmake.configureOnOpen": true,
     "files.associations": {
+        "*.cpp2": "cpp",
+        "*.h2": "cpp",
         "bit": "cpp",
         "memory_resource": "cpp",
         "bitset": "cpp",
@@ -82,6 +84,26 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "__bit_reference": "cpp",
+        "ios": "cpp",
+        "__config": "cpp",
+        "__debug": "cpp",
+        "__errc": "cpp",
+        "__locale": "cpp",
+        "__mutex_base": "cpp",
+        "__node_handle": "cpp",
+        "__split_buffer": "cpp",
+        "__threading_support": "cpp",
+        "__verbose_abort": "cpp",
+        "barrier": "cpp",
+        "latch": "cpp",
+        "locale": "cpp",
+        "queue": "cpp",
+        "semaphore": "cpp",
+        "stack": "cpp",
+        "strstream": "cpp"
     }
 }

@@ -24,7 +24,7 @@ CMake is used to pull in and build cppfront. It manages the dependcies of compil
 
 The project aims to organize and modularize logic to attempt to make browsing and learning easier for new users.
 
-All the source code goes into the [src](//github.com/mashumafi/frontier/blob/main/src) folder. Generally libraries are header-only. Below describes the hierarchy and purpose of the code.
+All the source code goes into the [src](//github.com/mashumafi/frontier/blob/main/src) folder. Below describes the hierarchy and purpose of the code.
 
 * [thirdparty](//github.com/mashumafi/frontier/blob/main/src/thirdparty) - external libraries pulled stright from git
   * [cppfront](//github.com/mashumafi/frontier/blob/main/src/thirdparty/cppfront) - cpp2 compiler
@@ -32,7 +32,7 @@ All the source code goes into the [src](//github.com/mashumafi/frontier/blob/mai
 * [adapters](//github.com/mashumafi/frontier/blob/main/src/adapters) - wrappers for external libraries to either modernize or add high-level abstractions
 * [groups](//github.com/mashumafi/frontier/blob/main/src/groups) - low level libraries
   * [csl](//github.com/mashumafi/frontier/blob/main/src/groups/csl/) - Chess Standard Library
-    * [cslb](//github.com/mashumafi/frontier/blob/main/src/groups/csl/cslb) - basis classes used across most of the project
+    * [cslb](//github.com/mashumafi/frontier/blob/main/src/groups/csl/cslb) - basis classes used across most of group
     * [csleh](//github.com/mashumafi/frontier/blob/main/src/groups/csl/csleh) - evaluation heuristics
     * [cslt](//github.com/mashumafi/frontier/blob/main/src/groups/csl/cslt) - transforms, mostly applies to encoding/decoding a position
     * [cslnnue](//github.com/mashumafi/frontier/blob/main/src/groups/csl/cslnnue) - efficiently updatable neural network

@@ -1,6 +1,6 @@
 cslb: namespace = {
 
-File : @enum type = {
+File: @enum type = {
     FileA;
     FileB;
     FileC;
@@ -9,7 +9,7 @@ File : @enum type = {
     FileF;
     FileG;
     FileH;
-    Size;
+    MaxFile;
 }
 
 }

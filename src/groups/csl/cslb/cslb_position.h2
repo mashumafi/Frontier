@@ -2,7 +2,7 @@
 
 cslb: namespace = {
 
-Position : type = {
+Position: type = {
     operator =: (out this, memory_resource: *std::pmr::memory_resource) = {
         m_memory_resource = memory_resource;
     }

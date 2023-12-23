@@ -1,6 +1,6 @@
 cslb: namespace = {
 
-Rank : @enum type = {
+Rank: @enum type = {
     Rank1;
     Rank2;
     Rank3;
@@ -9,7 +9,7 @@ Rank : @enum type = {
     Rank6;
     Rank7;
     Rank8;
-    Size;
+    MaxRank;
 }
 
 }

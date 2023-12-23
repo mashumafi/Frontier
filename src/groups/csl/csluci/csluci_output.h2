@@ -1,0 +1,12 @@
+csluci: namespace = {
+
+output: namespace = {
+    ReadyOk: @struct type = {
+    }
+}
+
+Output: @union type = {
+    readyOk: output::ReadyOk;
+}
+
+}

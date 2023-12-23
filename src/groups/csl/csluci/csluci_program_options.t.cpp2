@@ -1,0 +1,13 @@
+#include <csluci_program_options.h>
+
+#include <doctest/doctest.h>
+
+TEST_CASE("ProgramOptions basic")
+{
+    CHECK(5 == 5);
+}
+
+TEST_CASE("ProgramOptions advanced")
+{
+    CHECK(5 == 5);
+}

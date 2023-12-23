@@ -1,1 +1,1 @@
-add_subdirectory(csl)
+add_subdirectory(csl) # Chess Standard Library

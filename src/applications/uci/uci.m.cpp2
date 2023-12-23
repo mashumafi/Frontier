@@ -6,5 +6,5 @@
 main: (args) -> int = {
     memory_resource : *std::pmr::memory_resource = std::pmr::new_delete_resource();
     position : cslb::Position = (memory_resource);
-    session : cslb::Session = (move position, memory_resource);
+    _ : cslb::Session = (move position, memory_resource);
 }
